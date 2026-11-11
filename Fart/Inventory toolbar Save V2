@@ -1,0 +1,44 @@
+import subprocess
+import time
+
+keyboard.send_keys("º")
+time.sleep(0.1)
+
+origen_unico, destino_unico = (548, 1000), (516, 900)
+
+subprocess.run(["xdotool", "mousemove", str(origen_unico[0]), str(origen_unico[1])])
+time.sleep(0.0002)
+subprocess.run(["xdotool", "mousedown", "1"])
+time.sleep(0.0002)  
+subprocess.run(["xdotool", "mousemove", str(destino_unico[0]), str(destino_unico[1])])
+time.sleep(0.0002)  
+subprocess.run(["xdotool", "mouseup", "1"])
+time.sleep(0.0002)
+
+pares_coordenadas = [
+    ((548, 1000), (516, 900)),
+    ((612, 1000), (600, 900)),
+    ((680, 1000), (652, 900)),
+    ((740, 1000), (723, 900)),
+    ((807, 1000), (783, 900)),
+    ((870, 1000), (851, 900)),
+    ((939, 1000), (908, 900)),
+    ((1002, 1000), (971, 900)),
+    ((1065, 1000), (967, 900)),
+    ((1133, 1000), (1128, 900))
+]
+
+for origen, destino in pares_coordenadas:
+    x_orig, y_orig = origen
+    x_dest, y_dest = destino
+    
+    subprocess.run(["xdotool", "mousemove", str(x_orig), str(y_orig)])
+    time.sleep(0.001)
+    subprocess.run(["xdotool", "mousedown", "1"])
+    time.sleep(0.001)  
+    subprocess.run(["xdotool", "mousemove", str(x_dest), str(y_dest)])
+    time.sleep(0.001)  
+    subprocess.run(["xdotool", "mouseup", "1"])
+    time.sleep(0.001)
+
+
