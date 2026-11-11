@@ -5,9 +5,9 @@ keyboard.send_keys("º")
 time.sleep(0.1)  
 
 pares_coordenadas = [
-    ((980, 1050),  (996, 900)),
-    ((1057, 1050), (1051, 900)),
-    ((1119, 1050), (1123, 900)),
+    ((869, 1000),  (980, 900)),
+    ((937, 1000), (1057, 900)),
+    ((999, 1000), (1119, 900)),
 ]
 
 
@@ -63,12 +63,11 @@ time.sleep(0.01)
 
 
 
-mouse.click_relative(955, 481, 1)
-mouse.click_relative(955, 481, 1)
-mouse.click_relative(955, 481, 1)
-mouse.click_relative(955, 481, 1)
-mouse.click_relative(955, 481, 1)
-mouse.click_relative(955, 481, 1)
+mouse.click_relative(838, 439, 1)
+mouse.click_relative(838, 439, 1)
+mouse.click_relative(838, 439, 1)
+mouse.click_relative(838, 439, 1)
+mouse.click_relative(838, 439, 1)
 
 
 
